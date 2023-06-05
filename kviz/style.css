@@ -1,0 +1,17 @@
+.container {
+    max-width: 800px;
+}
+
+.game {
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    background-image: url(images/obrazek1.jpg);
+    background-size: cover;    
+}
+
+.game > div {
+    border: 1px solid black;
+}

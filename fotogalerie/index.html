@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogalerie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <h1>Interaktivní galerie</h1>
+            <p>
+                Napište skript, který obsluhuje galerii níže. 
+                Galerie obsahuje hlavní obrázek, který lze měnit
+                podle obrázků v náhledech. Změna může proběhnout dvěma způsoby
+                tlačítka Předchozí a Následující posouvají obrázky popořadě (včetně zřetězení).
+                Tlačítko Spustit prezentaci spouští prezentaci obrázku s 3 vteřinovým intervalem.
+                Při kliknutí na libovolný náhledový obrázek dojde k výměně obrázku nahoře 
+                (včetně pořadí přehrávání).
+            </p>
+        </div>
+        <div class="gallery">
+            <div class="main-image">
+                <img src="images/image1.jpg" alt="Obrázek 1">
+            </div>
+            <div class="controls">
+                <button class="prev">Předchozí obrázek</button>
+                <button class="slideshow">Spustit prezentaci</button>
+                <button class="next">Následující obrázek</button>
+            </div>
+            <div class="thumbnails">
+                <img src="images/image1.jpg" alt="Obrázek 1" class="active">
+                <img src="images/image2.jpg" alt="Obrázek 2">
+                <img src="images/image3.jpg" alt="Obrázek 3">
+                <img src="images/image4.jpg" alt="Obrázek 4">
+                <img src="images/image5.jpg" alt="Obrázek 5">
+                <img src="images/image6.jpg" alt="Obrázek 6">
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
