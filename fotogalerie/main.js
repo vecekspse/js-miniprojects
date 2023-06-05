@@ -12,7 +12,7 @@ next.addEventListener("click", function () {
     if(pocitadlo > obrazky.length - 1) {
         pocitadlo = 0;
     }
-    mainImg.src = obrazky[pocitadlo].src;
+    handleImage();
 });
 const prev = document.querySelector(".controls .prev");
 
@@ -21,5 +21,16 @@ prev.addEventListener("click", function () {
     if(pocitadlo < 0) {
         pocitadlo = obrazky.length - 1;
     }
-    mainImg.src = obrazky[pocitadlo].src;
+    handleImage();
 });
+obrazky.forEach(obrazek => {
+    obrazek.addEventListener("click", function (e) {
+        pocitadlo = [...obrazky].indexOf(obrazek);  
+        handleImage();
+    });
+});
+function handleImage() {
+    obrazky.forEach(obrazek => obrazek.classList.remove("active"));
+    obrazky[pocitadlo].classList.add("active");
+    mainImg.src = obrazky[pocitadlo].src;
+}
