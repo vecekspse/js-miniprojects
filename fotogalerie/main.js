@@ -14,3 +14,12 @@ next.addEventListener("click", function () {
     }
     mainImg.src = obrazky[pocitadlo].src;
 });
+const prev = document.querySelector(".controls .prev");
+
+prev.addEventListener("click", function () {
+    pocitadlo--;
+    if(pocitadlo < 0) {
+        pocitadlo = obrazky.length - 1;
+    }
+    mainImg.src = obrazky[pocitadlo].src;
+});
