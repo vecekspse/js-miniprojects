@@ -21,3 +21,10 @@ prev.addEventListener("click", function () {
     }
     mainImg.src = obrazky[pocitadlo].src;
 });
+
+obrazky.forEach(obrazek => {
+    obrazek.addEventListener("click", function (e) {
+        pocitadlo = [...obrazky].indexOf(obrazek);
+        mainImg.src = obrazky[pocitadlo].src;
+    });
+})
